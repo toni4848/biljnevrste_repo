@@ -20,10 +20,10 @@ class BiljnaVrsta(models.Model):
 
 
 class Slika(models.Model):
-	ID_slike = models.AutoField(primary_key=True, max_length=12)
+	ID_slike = models.AutoField(primary_key=True)
 	naziv_slike = models.CharField(max_length=50)
 	opis_slike = models.CharField(max_length=225)
-	ID_uporabnog_djela = models.ForeignKey(UporabniDio, on_delete=models.CASCADE, max_length=12)
+	ID_uporabnog_djela = models.ForeignKey(UporabniDio, on_delete=models.CASCADE)
 
 	class Meta:
 		verbose_name = "Slika"
